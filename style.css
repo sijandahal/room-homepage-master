@@ -305,13 +305,13 @@ p {
   }
 
   .container .buttons {
-    top: 405px;
+    top: 281px;
     right: 0px;
     z-index: 888888888;
-    top: 32%;
-    transform: translate(-46%, 11%);
-    right: -50px;
     left: unset;
+    bottom: unset;
+    transform: translate(-45%, 11%);
+    right: -50px;
   }
 
   .container .main .details {
@@ -331,8 +331,6 @@ p {
   .burger {
     display: inline-block;
     margin-left: 22px;
-    width: 34px;
-    top: -14px;
     cursor: pointer;
   }
 
