@@ -61,6 +61,7 @@ p {
 .burger {
   display: none;
 }
+
 @keyframes myanimation {
   from {
     opacity: 0;
@@ -99,7 +100,7 @@ p {
   letter-spacing: 12px;
   outline: none;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: all ease 0.35s;
@@ -153,7 +154,7 @@ p {
 .container nav {
   display: flex;
   position: absolute;
- top: 60px;
+  top: 60px;
   left: 62px;
   z-index: 88888888888888;
   -webkit-transition: all ease 0.35s;
@@ -241,10 +242,12 @@ p {
 .mobileimage {
   display: none;
 }
+
 @media only screen and (max-width: 1024px) {
   .container .main .details {
     padding: 57px 75px 99px 68px;
   }
+
   .container nav {
     left: 26px;
   }
@@ -283,10 +286,10 @@ p {
 
 
   .burger.open span:nth-child(1) {
-     -webkit-transform: translateY(4px) rotate(45deg);
-  -ms-transform: translateY(4px) rotate(45deg);
-  -o-transform: translateY(4px) rotate(45deg);
-  transform: translateY(4px) rotate(45deg);
+    -webkit-transform: translateY(4px) rotate(45deg);
+    -ms-transform: translateY(4px) rotate(45deg);
+    -o-transform: translateY(4px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
   }
 
   .burger.open span:nth-child(2) {
@@ -310,6 +313,7 @@ p {
     right: -50px;
     left: unset;
   }
+
   .container .main .details {
     padding: 75px 30px;
   }
@@ -317,11 +321,13 @@ p {
   h1 {
     font-size: 2.083em;
   }
+
   .container .buttons .left,
   .container .buttons .right {
     width: 56px;
     height: 56px;
   }
+
   .burger {
     display: inline-block;
     margin-left: 22px;
@@ -339,11 +345,13 @@ p {
     height: 110px;
     padding: 0px 23px;
   }
+
   .container nav {
     align-items: center;
     left: 0;
     width: 100%;
   }
+
   .container nav .logo {
     width: 100%;
     margin-right: 0;
@@ -355,53 +363,55 @@ p {
     display: none;
   }
 
-  
-body.menuopen .overlay{
-  opacity: 1;
-  visibility: visible;
+
+  body.menuopen .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body.menuopen {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
+  }
+
+  body.menuopen .logo {
+    display: none;
+  }
+
+  body.menuopen .menu-items {
+    display: block;
+    margin: auto;
+  }
+
+  body.menuopen .menu-items li a {
+    color: var(--Black);
+  }
+
+  body.menuopen nav {
+    background-color: var(--White);
+  }
+
+  body.menuopen nav span {
+    background-color: var(--Very-Dark-Gray);
+  }
+
+
+  .container nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    padding: 42px 0px;
+  }
+
+  .container .bottom .bottom-details {
+    padding: 60px 30px;
+    flex: 1;
+  }
 }
 
-body.menuopen{
- position: fixed;
- width: 100%;
- left: 0;
- top: 0;
- overflow-y: scroll;
-}
-
-body.menuopen .logo {
- display: none;
-}
-body.menuopen .menu-items {
- display: block;
- margin: auto;
-}
-
-body.menuopen .menu-items li a {
-color: var(--Black);
-}
-
-body.menuopen nav {
-background-color: var(--White);
-}
-
-body.menuopen nav span {
-  background-color: var(--Very-Dark-Gray);
-}
-
-
-.container nav {
-  display: flex;
-  position: absolute;
- top: 0;
- padding: 42px 0px;
-}
-
-.container .bottom .bottom-details {
-  padding: 60px 30px;
-  flex: 1;
-}
-}
 .overlay {
   position: fixed;
   top: 0;
@@ -414,7 +424,7 @@ body.menuopen nav span {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0 , 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all ease 0.35s;
   -moz-transition: all ease 0.35s;
   transition: all ease 0.35s;
